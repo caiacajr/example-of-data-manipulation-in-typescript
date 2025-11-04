@@ -1,9 +1,14 @@
-export type TransactionAPIPaymentMethod = "Cartão de Crédito" | "Boleto";
-export type TransactionAPIStatus =
-  | "Paga"
-  | "Recusada pela operadora de cartão"
-  | "Aguardando pagamento"
-  | "Estornada";
+const PAYMENT_METHODS = ["Cartão de Crédito", "Boleto"] as const;
+
+const STATUSES = [
+  "Paga",
+  "Recusada pela operadora de cartão",
+  "Aguardando pagamento",
+  "Estornada",
+] as const;
+
+export type TransactionAPIPaymentMethod = (typeof PAYMENT_METHODS)[number];
+export type TransactionAPIStatus = (typeof STATUSES)[number];
 
 export default interface TransactionAPI {
   Status: TransactionAPIStatus;
