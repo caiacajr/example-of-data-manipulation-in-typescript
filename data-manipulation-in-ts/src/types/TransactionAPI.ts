@@ -1,6 +1,6 @@
-const PAYMENT_METHODS = ["Cartão de Crédito", "Boleto"] as const;
+export const PAYMENT_METHODS = ["Cartão de Crédito", "Boleto"] as const;
 
-const STATUSES = [
+export const STATUSES = [
   "Paga",
   "Recusada pela operadora de cartão",
   "Aguardando pagamento",
