@@ -1,5 +1,5 @@
-import type Transaction from "../types/Transaction.js";
-import type TransactionAPI from "../types/TransactionAPI.js";
+import type Transaction from "../../types/Transaction.js";
+import type TransactionAPI from "../../types/TransactionAPI.js";
 import { DATE_REGEXP } from "./validateTransactionAPI.js";
 
 const transactionPaymentMethodMap: Record<

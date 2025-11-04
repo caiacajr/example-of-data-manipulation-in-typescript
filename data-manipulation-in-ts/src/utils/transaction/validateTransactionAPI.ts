@@ -1,10 +1,10 @@
-import type TransactionAPI from "../types/TransactionAPI.js";
+import type TransactionAPI from "../../types/TransactionAPI.js";
 import {
   PAYMENT_METHODS,
   STATUSES,
   type TransactionAPIPaymentMethod,
   type TransactionAPIStatus,
-} from "../types/TransactionAPI.js";
+} from "../../types/TransactionAPI.js";
 
 export const DATE_REGEXP = /^(\d{2})\/(\d{2})\/(\d{4})\s(\d{2}):(\d{2})$/;
 
