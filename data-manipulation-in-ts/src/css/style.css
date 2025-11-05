@@ -1,0 +1,37 @@
+body {
+  font-size: 1.25rem;
+  font-family: sans-serif;
+  margin: 2rem;
+}
+
+table {
+  border-spacing: 0;
+  text-align: left;
+}
+
+table td,
+table th {
+  padding: 0.5rem 1rem;
+}
+
+thead {
+  background-color: #f0f0f0;
+}
+
+th {
+  border: 1px solid lightgray;
+}
+
+th:not(:last-child),
+td:not(:last-child) {
+  border-right: 0px;
+}
+
+td {
+  border: 1px solid lightgray;
+  border-top: 0px;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
