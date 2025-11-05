@@ -1,13 +1,19 @@
-export default async function fetchData<T>(url: string): Promise<T | null> {
+import HttpRequestError from "../../errors/httpRequestError";
+
+export default async function fetchData<T>(url: string): Promise<T> {
   try {
     const response = await fetch(url);
-    if (!response.ok) throw new Error(`Status: ${response.status}`);
+    if (!response.ok) throw new HttpRequestError(url, response.status);
 
     const data = await response.json();
     return data;
-  } catch (e) {
-    if (e instanceof Error)
-      console.error("Error on fetching url: ", url, "\n", e.message);
-    return null;
+  } catch (error) {
+    if (error instanceof HttpRequestError) throw error;
+
+    throw new HttpRequestError(
+      url,
+      0,
+      error instanceof Error ? error.message : "INTERNET_CONNECTION_ERROR"
+    );
   }
 }
