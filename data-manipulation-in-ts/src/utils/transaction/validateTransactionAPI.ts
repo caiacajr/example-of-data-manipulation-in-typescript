@@ -1,7 +1,7 @@
 import type TransactionAPI from "../../types/transactionFromApi.types.js";
 import {
-  PAYMENT_METHODS,
-  STATUSES,
+  TRANSACTION_PAY_METHODS_API,
+  TRANSACTION_STATUSES_API,
   type TransactionAPIPaymentMethod,
   type TransactionAPIStatus,
 } from "../../types/transactionFromApi.types.js";
@@ -25,7 +25,7 @@ function isTransactionAPIStatus(
 ): status is TransactionAPIStatus {
   return (
     typeof status === "string" &&
-    STATUSES.includes(status as TransactionAPIStatus)
+    TRANSACTION_STATUSES_API.includes(status as TransactionAPIStatus)
   );
 }
 
@@ -34,7 +34,9 @@ function isTransactionAPIPaymentMethod(
 ): paymentMethod is TransactionAPIPaymentMethod {
   return (
     typeof paymentMethod === "string" &&
-    PAYMENT_METHODS.includes(paymentMethod as TransactionAPIPaymentMethod)
+    TRANSACTION_PAY_METHODS_API.includes(
+      paymentMethod as TransactionAPIPaymentMethod
+    )
   );
 }
 

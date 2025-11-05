@@ -1,14 +1,18 @@
-export const PAYMENT_METHODS = ["Cartão de Crédito", "Boleto"] as const;
+export const TRANSACTION_PAY_METHODS_API = [
+  "Cartão de Crédito",
+  "Boleto",
+] as const;
 
-export const STATUSES = [
+export const TRANSACTION_STATUSES_API = [
   "Paga",
   "Recusada pela operadora de cartão",
   "Aguardando pagamento",
   "Estornada",
 ] as const;
 
-export type TransactionAPIPaymentMethod = (typeof PAYMENT_METHODS)[number];
-export type TransactionAPIStatus = (typeof STATUSES)[number];
+export type TransactionAPIPaymentMethod =
+  (typeof TRANSACTION_PAY_METHODS_API)[number];
+export type TransactionAPIStatus = (typeof TRANSACTION_STATUSES_API)[number];
 
 export default interface TransactionAPI {
   Status: TransactionAPIStatus;
