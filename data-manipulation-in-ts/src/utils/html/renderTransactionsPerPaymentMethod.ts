@@ -9,7 +9,7 @@ export default function renderTransactionsPerPaymentMethod(
     "<h3>Number of transactions per payment method:</h3>" +
     TRANSACTION_PAY_METHODS.map(
       (pm) => `
-    <h3>${renderTransactionPaymentMethodMap[pm]}: <span>${transPerMethod[pm]} total sales</span></h3>
+    <p>${renderTransactionPaymentMethodMap[pm]}: <span>${transPerMethod[pm]} total sales</span></p>
     `
     ).join("\n")
   );

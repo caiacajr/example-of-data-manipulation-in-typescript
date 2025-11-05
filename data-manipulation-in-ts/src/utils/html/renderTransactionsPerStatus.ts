@@ -9,7 +9,7 @@ export default function renderTransactionsPerStatus(
     "<h3>Number of transactions per transaction stats:</h3>" +
     TRANSACTION_STATUSES.map(
       (pm) => `
-      <h3>${renderTransactionStatusMap[pm]}: <span>${stats[pm]} total sales</span></h3>
+      <p>${renderTransactionStatusMap[pm]}: <span>${stats[pm]} total sales</span></p>
       `
     ).join("\n")
   );
