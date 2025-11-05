@@ -4,6 +4,10 @@ body {
   margin: 2rem;
 }
 
+h2:not(:first-child) {
+  padding-top: 30px;
+}
+
 table {
   border-spacing: 0;
   text-align: left;
@@ -34,4 +38,28 @@ td {
 
 tbody tr:nth-child(even) {
   background-color: #f9f9f9;
+}
+
+#transactionsStatistics {
+  list-style: none;
+  position: relative;
+}
+
+#transactionsStatistics li p {
+  font-weight: 600;
+}
+
+#transactionsStatistics li span {
+  font-weight: 300;
+}
+#transactionsStatistics li:not(:first-child) {
+  padding-top: 4px;
+}
+#transactionsStatistics li:not(:first-child):before {
+  content: "";
+  background-color: lightgray;
+  width: 27px;
+  height: 3px;
+  position: absolute;
+  /* left: 0; */
 }

@@ -6,10 +6,29 @@
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>data-manipulation-in-ts</title>
+  <link rel="stylesheet" href="./src/css/style.css">
 </head>
 
 <body>
-  <div id="app"></div>
+  <h2>Statistics:</h2>
+  <ul id="transactionsStatistics">
+  </ul>
+  <h2>Transactions:</h2>
+  <table id="transactionsTable">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Status</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Date</th>
+        <th>Amount (R$)</th>
+        <th>Payment Method</th>
+        <th>Is a new client?</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
   <script type="module" src="/src/script.ts"></script>
 </body>
 
